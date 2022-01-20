@@ -1045,7 +1045,7 @@
 }
 /* Voice Channel: Live Icon */
 .sidebar-1tnWFu .scroller-1ox3I2:hover .iconSpacing-3rBbgf .live-1V2D-f {
-	border-radius: 16px;
+	border-radius: 14px; /* 16px */
 	padding: 0px 3px; /* 0px 4px */
 }
 
