@@ -170,7 +170,7 @@
 }
 /* Unread Server Message */
 .wrapper-1_HaEi [class^="listItem-"] .item-2LIpTv[style*="opacity: 1; height: 8px"] {
-	background: #62656B;
+	background: #2D2F33; /* #62656B */
 	border-radius: 0px 25px 25px 0px;
 }
 /* Selected Server */
@@ -1967,7 +1967,7 @@
 }
 /* New Messages/Mark As Read: Top Notice */
 .newMessagesBar-1hF-9G {
-	background-color: #191919;
+	background-color: #2D2F33; /* #191919 */
 	opacity: .95;
 }
 .newMessagesBar-1hF-9G:hover {
