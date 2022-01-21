@@ -46,7 +46,7 @@
 	--Chat-Wave-To-New-User-Button: flex;		/* flex = ON, none = OFF */
 	--Chat-Wave-To-New-DM-Button: flex;			/* flex = ON, none = OFF */
 	
-	--Voice-Noise-Suppression: none;			/* flex = ON, none = OFF */
+	--Voice-Noise-Suppression: flex;			/* flex = ON, none = OFF */
 	
 	--Embed-Remove-Button: flex;				/* flex = ON, none = OFF */
 	
