@@ -20,7 +20,7 @@
 	
 	--User-Popout-Width: 260px;					/* 236px, Discord default = 300px */
 	
-	--Channel-List-Width: 240px;				/* 196px, Discord default = 240px */
+	--Channel-List-Width: 260px;				/* 196px, Discord default = 240px */
 	--Channel-Invite-Edit-Buttons: none;		/* flex = ON, none = OFF */
 	--Channel-Category-Invite-Button: flex;		/* flex = ON, none = OFF */
 	--Channel-List-Active-Threads: flex;		/* flex = ON, none = OFF */
