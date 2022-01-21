@@ -739,8 +739,8 @@
 }
 .sidebar-1tnWFu .iconSpacing-3rBbgf .live-1V2D-f {
 	margin: 0px 0px 0px 0px; /* 0px -2px 0px -4px */
-	padding: 0px 2px 0px 4px; /* 0px 2px 0px 4px */
-	border-radius: 8px 0px 0px 8px;
+	padding: 0px 0px 0px 0px; /* 0px 2px 0px 4px */
+	border-radius: 0px 0px 0px 0px; /* 8px 0px 0px 8px */
 }
 /* StaffTag Plugin Icon */
 .sidebar-1tnWFu .icon-1dGlZy[name="Crown"] {
@@ -1434,11 +1434,11 @@
 
 /* Mute, Deafen, Settings Buttons */
 .container-YkUktl .button-12Fmur {
-	width: 17px;
+	width: 24px; /* 17px */
 	left: -3px;
 }
 .container-YkUktl .button-12Fmur svg {
-	width: 16px;
+	width: 23px; /* 16px */
 	margin-left: -2px;
 }
 .container-YkUktl .button-12Fmur:hover {
