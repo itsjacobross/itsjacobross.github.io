@@ -20,7 +20,7 @@
 	
 	--User-Popout-Width: 260px;					/* 236px, Discord default = 300px */
 	
-	--Channel-List-Width: 260px;				/* 196px, Discord default = 240px */
+	--Channel-List-Width: 240px;				/* 196px, Discord default = 240px */
 	--Channel-Invite-Edit-Buttons: none;		/* flex = ON, none = OFF */
 	--Channel-Category-Invite-Button: flex;		/* flex = ON, none = OFF */
 	--Channel-List-Active-Threads: flex;		/* flex = ON, none = OFF */
@@ -175,7 +175,7 @@
 }
 /* Selected Server */
 .wrapper-1_HaEi [class^="listItem-"] .item-2LIpTv[style*="opacity: 1; height: 40px"] {
-	background: #0C0C0C;
+	background: #2D2F33; /* #0C0C0C */
 	border-radius: 0px 25px 25px 0px;
 }
 /* Hovered Server */
@@ -197,7 +197,7 @@
 	background-color: #3C3F44;
 }
 .wrapper-1_HaEi [class^="expandedFolderBackground-"] {
-	background-color: #2F3136;
+	background-color: #1B1B1B; /* #2F3136 */
 	left: 8px;
 }
 .wrapper-1_HaEi [class^="folderIconWrapper-"][style*="background-color: rgba(88, 101, 242, 0.4)"],
@@ -571,14 +571,14 @@
 	display: var(--Channel-Category-Invite-Button);
 }
 
-/* Text Channels First Letter Uppercase */
+/* Text Channels First Letter Uppercase REMOVED END COMMENT
 .standardSidebarView-E9Pc3j .contentColumn-1C7as6 .title-3DKv5a::first-letter,
 .sidebar-1tnWFu .mainContent-20q_Hp .name-28HaxV::first-letter,
 .root-g14mjS .override-1sK4r0 .channelName-IPB6B3::first-letter,
 .root-g14mjS .wrapper-38NYkc .title-3DKv5a::first-letter,
 .title-31SJ6t .children-3xh0VB > h3 {
 	text-transform: var(--Text-Channels-Capital-Letter);
-}
+} */
 
 /* Selected/Hovered Channel Background */
 .sidebar-1tnWFu .wrapper-NhbLHG .content-1gYQeQ {
@@ -739,7 +739,7 @@
 }
 .sidebar-1tnWFu .iconSpacing-3rBbgf .live-1V2D-f {
 	margin: 0px -2px 0px -4px;
-	padding: 0px 2px 0px 4px;
+	padding: 0px 4px 0px 4px; /* 0px 2px 0px 4px */
 	border-radius: 8px 0px 0px 8px;
 }
 /* StaffTag Plugin Icon */
