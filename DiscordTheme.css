@@ -683,7 +683,7 @@
 .sidebar-1tnWFu [d="M22.025 2V3C22.5635 3 23 3.43652 23 3.975V7C23 7.55228 22.5523 8 22 8H18C17.4477 8 17 7.55228 17 7V4C17 3.44772 17.4477 3 18 3V2C18 0.88 18.95 0 20 0C21.05 0 22.025 0.88 22.025 2ZM19 3H21V2C21 1.42857 20.5333 1 20 1C19.4667 1 19 1.42857 19 2V3Z"],
 .sidebar-1tnWFu [d="M22.545 4.87988V5.87988H23.28C23.4126 5.87988 23.52 5.98733 23.52 6.11988V10.6399C23.52 10.7724 23.4126 10.8799 23.28 10.8799H17.76C17.6275 10.8799 17.52 10.7724 17.52 10.6399V6.11988C17.52 5.98733 17.6275 5.87988 17.76 5.87988H18.52V4.87988C18.52 3.75988 19.47 2.87988 20.52 2.87988C21.57 2.87988 22.545 3.75988 22.545 4.87988ZM19.52 5.87988H21.52V4.87988C21.52 4.30845 21.0534 3.87988 20.52 3.87988C19.9867 3.87988 19.52 4.30845 19.52 4.87988V5.87988Z"],
 .sidebar-1tnWFu [d="M22.545 4.91992V3.91992C22.545 2.79992 21.57 1.91992 20.52 1.91992C19.47 1.91992 18.52 2.79992 18.52 3.91992V4.91992H17.76C17.6275 4.91992 17.52 5.02737 17.52 5.15992V9.67992C17.52 9.81247 17.6275 9.91992 17.76 9.91992H23.28C23.4126 9.91992 23.52 9.81247 23.52 9.67992V5.15992C23.52 5.02737 23.4126 4.91992 23.28 4.91992H22.545ZM21.52 4.91992H19.52V3.91992C19.52 3.34849 19.9867 2.91992 20.52 2.91992C21.0533 2.91992 21.52 3.34849 21.52 3.91992V4.91992Z"] {
-	fill: hsl(40, calc(var(--saturation-factor, 1) * 90%), 55%);
+	fill: hsl(167, 50%, 47%); /* hsl(40, calc(var(--saturation-factor, 1) * 90%), 55%); */
 }
 /* Voice Channel: Username Flicker Fix */
 .sidebar-1tnWFu .list-2x9Cl9 .username-vAneIW {
@@ -738,9 +738,9 @@
 	margin-left: -4px;
 }
 .sidebar-1tnWFu .iconSpacing-3rBbgf .live-1V2D-f {
-	margin: 0px 0px 0px 0px; /* 0px -2px 0px -4px */
-	padding: 0px 0px 0px 0px; /* 0px 2px 0px 4px */
-	border-radius: 0px 0px 0px 0px; /* 8px 0px 0px 8px */
+	margin: 0px 10px 0px 0px; /* 0px -2px 0px -4px */
+	padding: 0px 10px 0px 0px; /* 0px 2px 0px 4px */
+	border-radius: 0px 10px 0px 0px; /* 8px 0px 0px 8px */
 }
 /* StaffTag Plugin Icon */
 .sidebar-1tnWFu .icon-1dGlZy[name="Crown"] {
@@ -1435,11 +1435,11 @@
 /* Mute, Deafen, Settings Buttons */
 .container-YkUktl .button-12Fmur {
 	width: 24px; /* 17px */
-	left: -3px;
+	left: -6px; /* -3px */
 }
 .container-YkUktl .button-12Fmur svg {
 	width: 23px; /* 16px */
-	margin-left: -2px;
+	margin-left: -4px; /* -2px */
 }
 .container-YkUktl .button-12Fmur:hover {
 	background: transparent;
