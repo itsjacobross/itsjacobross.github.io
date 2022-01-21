@@ -197,7 +197,7 @@
 	background-color: #3C3F44;
 }
 .wrapper-1_HaEi [class^="expandedFolderBackground-"] {
-	background-color: #1B1B1B; /* #2F3136 */
+	background-color: #3C3F44; /* #2F3136 */
 	left: 8px;
 }
 .wrapper-1_HaEi [class^="folderIconWrapper-"][style*="background-color: rgba(88, 101, 242, 0.4)"],
@@ -738,8 +738,8 @@
 	margin-left: -4px;
 }
 .sidebar-1tnWFu .iconSpacing-3rBbgf .live-1V2D-f {
-	margin: 0px -2px 0px -4px;
-	padding: 0px 4px 0px 4px; /* 0px 2px 0px 4px */
+	margin: 0px 0px 0px 0px; /* 0px -2px 0px -4px */
+	padding: 0px 2px 0px 4px; /* 0px 2px 0px 4px */
 	border-radius: 8px 0px 0px 8px;
 }
 /* StaffTag Plugin Icon */
