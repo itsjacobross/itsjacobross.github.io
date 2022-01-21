@@ -197,7 +197,7 @@
 	background-color: #3C3F44;
 }
 .wrapper-1_HaEi [class^="expandedFolderBackground-"] {
-	background-color: #3C3F44; /* #2F3136 */
+	background-color: #2D2F33; /* #2F3136 */
 	left: 8px;
 }
 .wrapper-1_HaEi [class^="folderIconWrapper-"][style*="background-color: rgba(88, 101, 242, 0.4)"],
@@ -738,9 +738,9 @@
 	margin-left: -4px;
 }
 .sidebar-1tnWFu .iconSpacing-3rBbgf .live-1V2D-f {
-	margin: 0px 10px 0px 0px; /* 0px -2px 0px -4px */
-	padding: 0px 10px 0px 0px; /* 0px 2px 0px 4px */
-	border-radius: 0px 10px 0px 0px; /* 8px 0px 0px 8px */
+	margin: 0px 4px 0px 0px; /* 0px -2px 0px -4px */
+	padding: 0px 4px 0px 0px; /* 0px 2px 0px 4px */
+	border-radius: 0px 4px 0px 0px; /* 8px 0px 0px 8px */
 }
 /* StaffTag Plugin Icon */
 .sidebar-1tnWFu .icon-1dGlZy[name="Crown"] {
@@ -1434,12 +1434,12 @@
 
 /* Mute, Deafen, Settings Buttons */
 .container-YkUktl .button-12Fmur {
-	width: 24px; /* 17px */
+	width: 20px; /* 17px */
 	left: -6px; /* -3px */
 }
 .container-YkUktl .button-12Fmur svg {
-	width: 23px; /* 16px */
-	margin-left: -4px; /* -2px */
+	width: 20px; /* 16px */
+	margin-left: -6px; /* -2px */
 }
 .container-YkUktl .button-12Fmur:hover {
 	background: transparent;
