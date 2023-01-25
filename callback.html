@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Callback</title>
+  </head>
+  <body>
+    <h1>Callback</h1>
+    <script>
+      // Get the authorization code from the query string
+      const authCode = new URLSearchParams(window.location.search).get("code");
+
+      // Set the client ID, client secret, and redirect URI
+      const clientId = "a5944b9100794afb8c64f0fc3f9de0db";
+      const clientSecret = "adf43e40273f43f49213200130f95803";
+      const redirectUri = "https://itsjacobross.github.io/";
+
+      // Build the POST request data
+      const data = {
+        grant_type: "authorization_code",
+        code: authCode,
+        redirect_uri: redirectUri
+      };
+
+      // Build the POST request options
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization: "Basic " + btoa(`${clientId}:${clientSecret}`)
+        },
+        body: new URLSearchParams(data).toString()
+      };
+
+      // Send the POST request to the Spotify token endpoint
+      fetch("https://accounts.spotify.com/api/token", options)
+        .then(response => response.json())
+        .then(data => {
+          // Get the access token
+          const accessToken = data.access_token;
+          //You can use the access token to access the Spotify Web API on behalf of the user.
+          //You can also send the access token to your discord bot
+          //And you can also save the access token on your device.
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    </script>
+  </body>
+</html>
+

@@ -1,5 +1,35 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to https://example.com/</title>
-<meta http-equiv="refresh" content="0; URL=https://example.com/">
-<link rel="canonical" href="https://example.com/">
+<html>
+  <head>
+    <title>Spotify Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/spotify-web-api-js"></script>
+  </head>
+  <body>
+    <h1>Spotify Login</h1>
+    <button id="login-button">Login with Spotify</button>
+    <script>
+      // Initialize the Spotify Web API
+      const spotifyApi = new SpotifyWebApi();
+
+      // Get the login button
+      const loginButton = document.getElementById("login-button");
+
+      // Add an event listener to the login button
+      loginButton.addEventListener("click", function() {
+        // Set the client ID and redirect URI
+        const clientId = "a5944b9100794afb8c64f0fc3f9de0db";
+        const redirectUri = "https://itsjacobross.github.io/callback/";
+
+        // Set the Spotify Web API scope
+        const scope = "user-library-modify user-library-read user-modify-playback-state";
+
+        // Build the Spotify authorization URL
+        const authUrl = `https://accounts.spotify.com/authorize?client_id=a5944b9100794afb8c64f0fc3f9de0db&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fcallback%2F&scope=user-library-modify+user-library-read+user-modify-playback-state`;
+
+        // Redirect the user to the Spotify authorization URL
+        window.location = authUrl;
+      });
+    </script>
+  </body>
+</html>
+>
