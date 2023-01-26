@@ -5,8 +5,8 @@
   </head>
   <body>
     <h1>Callback</h1>
-    <p>Access Token: <span id="access-token"></span></p>
-    <p>Username: <span id="username"></span></p>
+    <p>Spotify username: <span id="username"></span></p>
+    <p>You will need to send your Spotify username to the Discord bot via the /link command.</p>
     <script>
       // Get the authorization code from the query string
       const authCode = new URLSearchParams(window.location.search).get("code");
@@ -39,9 +39,6 @@
       .then(data => {
         // Get the access token
         const accessToken = data.access_token;
-	// Display the access token on the page
-	const accessTokenElement = document.getElementById("access-token");
-	accessTokenElement.textContent = accessToken;
         // Send a GET request to the Spotify Web API's user-profile endpoint
         fetch("https://api.spotify.com/v1/me", {
             headers: {
