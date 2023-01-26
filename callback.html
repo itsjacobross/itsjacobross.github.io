@@ -44,6 +44,36 @@
         .catch(error => {
           console.error("Error:", error);
         });
+
+        // Send the POST request to the Spotify user data endpoint
+        fetch("https://api.spotify.com/v1/me", {
+          headers: {
+            'Authorization': 'Bearer '+ accessToken
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log("User Data:", data);
+          const username = data.id
+         });
+
+         fetch("https://www.discspotq.pythonanywhere.com/save_token", {
+           method: "POST",
+           body: JSON.stringify({
+             username: username,
+             access_token: accessToken
+           }),
+           headers: {
+             "Content-Type": "application/json"
+           }
+         })
+         .then(response => response.json())
+         .then(data => {
+           console.log("Success:", data);
+         })
+         .catch(error => {
+           console.error("Error:", error);
+         });
     </script>
   </body>
 </html>
