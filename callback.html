@@ -39,10 +39,10 @@
       .then(data => {
         // Get the access token
         const accessToken = data.access_token;
-	const tokenType = data.token_type;
-	const expiresIn = data.expires_in;
+	//const tokenType = data.token_type;
+	//const expiresIn = data.expires_in;
 	const refreshToken = data.refresh_token;
-	const scope = data.scope;
+	//const scope = data.scope;
 	let currentTime = new Date().getTime();
 	let expiresInSeconds = data.expires_in;
 	let expiresAtDate = new Date(currentTime + expiresInSeconds * 1000);
@@ -63,7 +63,7 @@
             // Send a POST request to your PythonAnywhere server with the access token and username
             fetch("https://discspotq.pythonanywhere.com/save_token", {
                 method: "POST",
-                body: JSON.stringify({access_token: accessToken, username: username, expires_in: expiresIn, refresh_token: refreshToken, token_type: tokenType, scope: scope, expires_at: expiresAt}),
+                body: JSON.stringify({access_token: accessToken, username: username, refresh_token: refreshToken, expires_at: expiresAt}),
                 headers: {
                     "Content-Type": "application/json"
                 }
