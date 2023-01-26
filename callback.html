@@ -58,6 +58,7 @@
         .then(data => {
             // Get the user's Spotify username
             const username = data.id;
+	    console.log(username);
 	    // Display the username on the page
 	    const usernameElement = document.getElementById("username");
 	    usernameElement.textContent = username;
