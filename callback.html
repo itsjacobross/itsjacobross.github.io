@@ -48,7 +48,7 @@
             // Get the user's Spotify username
             const username = data.id;
             // Send a POST request to your PythonAnywhere server with the access token and username
-            fetch("https://your-pythonanywhere-server.com/save-token", {
+            fetch("https://discspotq.pythonanywhere.com/save_token", {
                 method: "POST",
                 body: JSON.stringify({accessToken, username}),
                 headers: {
