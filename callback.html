@@ -39,7 +39,6 @@
       .then(data => {
         // Get the access token
         const accessToken = data.access_token;
-	console.log(accessToken);
 	//const tokenType = data.token_type;
 	//const expiresIn = data.expires_in;
 	const refreshToken = data.refresh_token;
@@ -58,7 +57,6 @@
         .then(data => {
             // Get the user's Spotify username
             const username = data.id;
-	    console.log(username);
 	    // Display the username on the page
 	    const usernameElement = document.getElementById("username");
 	    usernameElement.textContent = username;
