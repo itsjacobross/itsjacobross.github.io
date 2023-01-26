@@ -42,8 +42,7 @@
       	const refreshToken = data.refresh_token;
       	const expiresIn = data.expires_in;
         let currentTime = new Date().getTime();
-      	let expiresAtDate = new Date(currentTime + expiresIn * 1000);
-      	let expiresAt = expiresAtDate.getTime();
+      	let expiresAt = currentTime + expiresIn * 1000;
         console.log(expiresAt)
         console.log(currentTime)
 
@@ -69,7 +68,6 @@
             accessToken = data.access_token;
             expiresIn = data.expires_in;
             currentTime = new Date().getTime();
-            expiresAtDate = new Date(currentTime + expiresIn * 1000);
             expiresAt = currentTime + expiresIn * 1000;
             // Now you can use the new access token to make the GET request
             fetch("https://api.spotify.com/v1/me", {
