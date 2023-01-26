@@ -39,6 +39,11 @@
       .then(data => {
         // Get the access token
         const accessToken = data.access_token;
+	const tokenType = data.token_type;
+	const expiresIn = data.expires_in;
+	const refreshToken = data.refresh_token;
+	const scope = data.scope;
+	const expiresAt = data.expires_at;
         // Send a GET request to the Spotify Web API's user-profile endpoint
         fetch("https://api.spotify.com/v1/me", {
             headers: {
@@ -55,7 +60,7 @@
             // Send a POST request to your PythonAnywhere server with the access token and username
             fetch("https://discspotq.pythonanywhere.com/save_token", {
                 method: "POST",
-                body: JSON.stringify({access_token: accessToken, username: username}),
+                body: JSON.stringify({access_token: accessToken, username: username, expires_in: expiresIn, refresh_token: refreshToken, token_type: tokenType, scope: scope, expires_at: expiresAt}),
                 headers: {
                     "Content-Type": "application/json"
                 }
