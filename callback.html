@@ -39,14 +39,49 @@
       .then(data => {
         // Get the access token
         const accessToken = data.access_token;
-	//const tokenType = data.token_type;
-	//const expiresIn = data.expires_in;
-	const refreshToken = data.refresh_token;
-	//const scope = data.scope;
-	let currentTime = new Date().getTime();
-	let expiresInSeconds = data.expires_in;
-	let expiresAtDate = new Date(currentTime + expiresInSeconds * 1000);
-	let expiresAt = expiresAtDate.getTime();
+      	const refreshToken = data.refresh_token;
+      	const expiresIn = data.expires_in;
+        let currentTime = new Date().getTime();
+      	let expiresAtDate = new Date(currentTime + expiresIn * 1000);
+      	let expiresAt = expiresAtDate.getTime();
+
+        const refreshAccessToken = () => {
+          // Prepare the body of the request
+          const refreshdata = {
+            grant_type: "refresh_token",
+            refresh_token: refreshToken,
+            client_id: clientId,
+            client_secret: clientSecret
+          };
+          // Send the POST request
+          fetch("https://accounts.spotify.com/api/token", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams(refreshdata).toString()
+          })
+          .then(response => response.json())
+          .then(refreshdata => {
+            // Update the access token and expiry time
+            accessToken = data.access_token;
+            expiresIn = data.expires_in;
+            currentTime = new Date().getTime();
+            expiresAtDate = new Date(currentTime + expiresIn * 1000);
+            expiresAt = currentTime + expiresIn * 1000;
+            // Now you can use the new access token to make the GET request
+            fetch("https://api.spotify.com/v1/me", {
+              headers: {
+                Authorization: `Bearer ${accessToken}`
+              }
+            });
+          });
+        };
+
+        if (expiresAt < currentTime) {
+          refreshAccessToken()
+        }
+
         // Send a GET request to the Spotify Web API's user-profile endpoint
         fetch("https://api.spotify.com/v1/me", {
             headers: {
@@ -92,4 +127,3 @@
     </script>
   </body>
 </html>
-
