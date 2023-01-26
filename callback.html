@@ -44,6 +44,8 @@
         let currentTime = new Date().getTime();
       	let expiresAtDate = new Date(currentTime + expiresIn * 1000);
       	let expiresAt = expiresAtDate.getTime();
+        console.log(expiresAt)
+        console.log(currentTime)
 
         const refreshAccessToken = () => {
           // Prepare the body of the request
