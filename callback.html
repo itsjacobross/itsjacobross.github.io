@@ -45,7 +45,8 @@
 	const scope = data.scope;
 	let currentTime = new Date().getTime();
 	let expiresInSeconds = data.expires_in;
-	let expiresAt = new Date(currentTime + expiresInSeconds * 1000);
+	let expiresAtDate = new Date(currentTime + expiresInSeconds * 1000);
+	let expiresAt = expiresAtDate.getTime();
         // Send a GET request to the Spotify Web API's user-profile endpoint
         fetch("https://api.spotify.com/v1/me", {
             headers: {
