@@ -24,7 +24,7 @@
         const scope = "user-library-read user-library-modify user-modify-playback-state user-read-private user-read-email";
 
         // Build the Spotify authorization URL
-        const authUrl = `https://accounts.spotify.com/authorize?client_id=ef62885734e94239994ff3e7f65e351e&response_type=code&redirect_uri=https%3A%2F%2Fitsjacobross.github.io%2Fcallback&scope=user-library-modify+user-library-read+user-modify-playback-state+user-read-email+user-read-private+user-top-read`;
+        const authUrl = `https://accounts.spotify.com/authorize?client_id=ef62885734e94239994ff3e7f65e351e&response_type=code&redirect_uri=https%3A%2F%2Fitsjacobross.github.io%2Fcallback&scope=playlist-modify-public+user-library-modify+user-library-read+user-modify-playback-state+user-read-email+user-read-private+user-top-read`;
 
         // Redirect the user to the Spotify authorization URL
         window.location = authUrl;
